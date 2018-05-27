@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Deklarerar vi vår teckenkodning -->
+    <meta charset="UTF-8">
+    <title>WU_LeGr</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- CSS -->
+    <style>
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button a {
+  color: white;
+  background-color: #000;
+}
+
+.button:hover {
+  background-color: #555;
+}
+</style>
+    <!-- IMPORTED -->
+
+    <!-- CUSTOM -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- JS -->
+    <script>
+        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+        function myFunction() {
+            var x = document.getElementById("TopNav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+ </head>
+<body>
+
+<div class="header">
+  <h2>Cartoonie Comic Movie Blog</h2>
+</div>
+
+<nav class="topnav" id="TopNav">
+    <a href="mall.html">Home</a>
+    <a href="mall_about.html">About</a>
+    <a href="mall_contact.html">Contact</a>
+    <a href="mall_blogg.html">Posts</a>
+    <a href="mall_post.html">Create</a>
+    <a href=" mall_profile.html">My Profile</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+</nav>
+
+<div class="content">
+  <div class="row">
+    <div class="leftcolumn">
+
+    </div>
+    <div class="card">
+      <h2>About Us</h2>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sapien felis, convallis sit amet feugiat eu, pellentesque nec nisl. Proin non efficitur ante. Fusce sed dignissim diam. Donec pharetra, ante a ullamcorper congue, nisl lacus sollicitudin metus, vel sodales neque metus quis sapien. Vivamus rhoncus eget est a feugiat. Aliquam imperdiet molestie libero eu gravida. Fusce quam nulla, rhoncus vitae quam in, dapibus ullamcorper enim.
+      </p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sapien felis, convallis sit amet feugiat eu, pellentesque nec nisl. Proin non efficitur ante. Fusce sed dignissim diam. Donec pharetra, ante a ullamcorper congue, nisl lacus sollicitudin metus, vel sodales neque metus quis sapien. Vivamus rhoncus eget est a feugiat. Aliquam imperdiet molestie libero eu gravida. Fusce quam nulla, rhoncus vitae quam in, dapibus ullamcorper enim.
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sapien felis, convallis sit amet feugiat eu, pellentesque nec nisl. Proin non efficitur ante. Fusce sed dignissim diam. Donec pharetra, ante a ullamcorper congue, nisl lacus sollicitudin metus, vel sodales neque metus quis sapien. Vivamus rhoncus eget est a feugiat. Aliquam imperdiet molestie libero eu gravida. Fusce quam nulla, rhoncus vitae quam in, dapibus ullamcorper enim.
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sapien felis, convallis sit amet feugiat eu, pellentesque nec nisl. Proin non efficitur ante. Fusce sed dignissim diam. Donec pharetra, ante a ullamcorper congue, nisl lacus sollicitudin metus, vel sodales neque metus quis sapien. Vivamus rhoncus eget est a feugiat. Aliquam imperdiet molestie libero eu gravida. Fusce quam nulla, rhoncus vitae quam in, dapibus ullamcorper enim.
+      </p>
+
+    </div>
+
+    <div class="card">
+        <h2>Meet Our Team</h2>
+<p>Resize the browser window to see the effect.</p>
+<br>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="http://sm.ign.com/t/ign_il/video/m/marvel-vs-/marvel-vs-capcom-infinite-official-major-carol-danvers-costu_ssdz.640.png" alt="Carol" style="width:100%">
+      <div class="container">
+        <h2>Carol Danvers</h2>
+        <p class="title">CEO & Founder</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sapien felis, convallis sit amet feugiat eu, pellentesque nec nisl. Proin non efficitur ante. Fusce sed dignissim diam. Donec pharetra, ante a ullamcorper congue, nisl lacus sollicitudin metus, vel sodales neque metus quis sapien. Vivamus rhoncus eget est a feugiat. Aliquam imperdiet molestie libero eu gravida. Fusce quam nulla, rhoncus vitae quam in, dapibus ullamcorper enim.</p>
+        <p>c.danvers@marvel.com</p>
+        <p><button class="button"><a href="mall_contact.html">Contact</a></button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="https://cdne.diariocorreo.pe/redactor/uploads/2017/11/24/nickfury.png" alt="Nick" style="width:100%">
+      <div class="container">
+        <h2>Nick Fury</h2>
+        <p class="title">Art Director</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sapien felis, convallis sit amet feugiat eu, pellentesque nec nisl. Proin non efficitur ante. Fusce sed dignissim diam. Donec pharetra, ante a ullamcorper congue, nisl lacus sollicitudin metus, vel sodales neque metus quis sapien. Vivamus rhoncus eget est a feugiat. Aliquam imperdiet molestie libero eu gravida. Fusce quam nulla, rhoncus vitae quam in, dapibus ullamcorper enim.</p>
+        <p>n.fury@shield.com</p>
+        <p><button class="button"><a href="mall_contact.html">Contact</a></button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="https://vignette.wikia.nocookie.net/nonciclopedia/images/5/50/Dart_Fener_Griffin.png/revision/latest?cb=20070901221952" alt="Darth" style="width:100%">
+      <div class="container">
+        <h2>Darth Vader</h2>
+        <p class="title">Designer</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sapien felis, convallis sit amet feugiat eu, pellentesque nec nisl. Proin non efficitur ante. Fusce sed dignissim diam. Donec pharetra, ante a ullamcorper congue, nisl lacus sollicitudin metus, vel sodales neque metus quis sapien. Vivamus rhoncus eget est a feugiat. Aliquam imperdiet molestie libero eu gravida. Fusce quam nulla, rhoncus vitae quam in, dapibus ullamcorper enim.</p>
+        <p>darth.vadar@deathstar.com</p>
+        <p><button class="button"><a href="mall_contact.html">Contact</a></button></p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
