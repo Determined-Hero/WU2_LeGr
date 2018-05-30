@@ -4,7 +4,10 @@
     <!-- Deklarerar vi vår teckenkodning -->
     <meta charset="UTF-8">
     <title>WU_LeGr</title>
-
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,900' rel='stylesheet' type='text/css'>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+      <script>var ml = { timelines: {}};</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
@@ -28,14 +31,78 @@
                 x.className = "topnav";
             }
         }
+
+        <style>
+  .moving-letters {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  </style>
     </script>
  </head>
 <body>
 
-<div class="header">
-  <h2>Cartoonie Comic Movie Blog</h2>
-</div>
+    <!-- En banner ska vara placerad längst upp på toppen av hemsidan och den ska sträcka sig från båda sidorna,
+         och under den ska menyn vara så att man kan flytta sig mellan olika sidor genom länkar. -->
+         <header>
+             <div class="moving-letters">
+            <h1 class="ml9">
+          <span class="text-wrapper">
+            <span class="letters">Cartoonie Comic Movie Blog</span>
+          </span>
+         </h1>
+         </header>
 
+<!-- More JS -->
+<script>
+// Wrap every letter in a span
+$('.ml9 .letters').each(function(){
+ $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+});
+ml.timelines["ml9"] = anime.timeline({loop: true})
+ .add({
+   targets: '.ml9 .letter',
+   scale: [0, 1],
+   duration: 1500,
+   elasticity: 600,
+   delay: function(el, i) {
+     return 45 * (i+1)
+   }
+ }).add({
+   targets: '.ml9',
+   opacity: 0,
+   duration: 1000,
+   easing: "easeOutExpo",
+   delay: 1000
+ });
+</script>
+
+<style>
+.ml9 {
+ position: relative;
+ font-weight: 200;
+ font-size: 4em;
+}
+.ml9 .text-wrapper {
+ position: relative;
+ display: inline-block;
+ padding-top: 0.2em;
+ padding-right: 0.05em;
+ padding-bottom: 0.1em;
+ overflow: hidden;
+}
+.ml9 .letter {
+ transform-origin: 50% 100%;
+ display: inline-block;
+ line-height: 1em;
+}
+</style>
+
+<!-- Navigation -->
 <nav class="topnav" id="TopNav">
     <a href="mall.html">Home</a>
     <a href="mall_about.html">About</a>
@@ -48,6 +115,7 @@
         </a>
 </nav>
 
+<!-- Min Profils Info -->
 <div class="content">
   <div class="row">
     <div class="leftcolumn">
@@ -77,11 +145,16 @@
     </div>
   </div>
 
-
-
-
     </div>
 </div>
+
+<div class="sk-folding-cube">
+  <div class="sk-cube1 sk-cube"></div>
+  <div class="sk-cube2 sk-cube"></div>
+  <div class="sk-cube4 sk-cube"></div>
+  <div class="sk-cube3 sk-cube"></div>
+</div>
+
 
 </body>
 </html>
